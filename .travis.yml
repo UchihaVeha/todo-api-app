@@ -2,6 +2,13 @@ sudo: false
 language: node_js
 node_js: 8
 services:
-  - postgresql
+- postgresql
 addons:
-  postgresql: "9.6"
+  postgresql: '9.6'
+deploy:
+  provider: heroku
+  api_key:
+    secure: VNdDEAKcf8EZevd7isByXpUAAltMlaXiPxKv/FkOOqKWfY63zvaNyvzmn2oOeUiwrZ1CIopBEiovbX8TuFhMEhkOvgVyo3u3QJQ9ktgbo7SDPG2ueKK7FltdqfSzrVof5G3WY4F6pok+g6qPkQPiApKd73kLd06NFzrRK/nTSGs/7qI9Y10VudwiQoW0uV9UYj+g5WkszTeuqP4pAsieTzxPuUWNEL+yXue3Df9xuBBaSHEj6E5PSkIvBmhiPi576GovZ3N4C6mdJisOEfQDxJwnV0dA6X2lvp9vWY2DdbvmIf9kcbhh+pk1V6YAj5gSEMa35qLqytiqyUmT3WC41c6Tep99WP6pQYJJpDIhdYDiicP9SBU8JCywIbyEfGT/bd3waXYhMUhxlF6PEP/w4u81gaX8S6LE8KoPwJbR7vguuwHLiNTuQypHN6IfM5NbdurVXGeEPP7FUao83D+CGVAC//pPY5fIPCcMFlMsbggCVwmZZp4V42goY9JPfznxZBmROd6Ju5eveGHyza6PWwUneYMtgYB6wbtT6eg/S7z1J6SeDOayGiXZOSRxVeHeQKf7zj6VEc9JK3Lq3pPgsF017O9tbnPyOrQxan14VHx2SOn2wb6smnQ+K55DW1ARn8o+I72OzPoTZGRmN2vwd823ezFLilie2UztNiOlf8k=
+  app: veha-todo-api-app
+  on:
+    repo: UchihaVeha/todo-api-app
