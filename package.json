@@ -21,8 +21,7 @@
     "test": "npm run lint && npx jest",
     "migrate": "npx knex migrate:latest",
     "migrate-down": "npx knex migrate:rollback",
-    "prettify": "npx prettier --single-quote --trailing-comma none --write \"src/**/*.js\"",
-
+    "prettify": "npx prettier --single-quote --trailing-comma none --write \"src/**/*.js\""
   },
   "author": "Vitaliy Kolodeev",
   "license": "ISC",
