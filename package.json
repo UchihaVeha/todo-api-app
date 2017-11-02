@@ -13,7 +13,7 @@
   "main": "index.js",
   "scripts": {
     "heroku-prebuild": "npm install --only=dev",
-    "postinstall": "npm run build && npm run migrate",
+    "heroku-postbuild": "npm run build && npm run migrate",
     "build": "npx babel src --out-dir build",
     "start": "node ./node_modules/.bin/pm2 start build/index.js -i max --attach",
     "start:dev": "npx nodemon index-dev.js",
