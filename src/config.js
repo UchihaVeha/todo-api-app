@@ -20,6 +20,7 @@ const env = {
 
 const config = {
   port: process.env.PORT || 3006,
+  host: process.env.HOST || '0.0.0.0',
   env,
   urlPrefix: '/v1',
   auth: {

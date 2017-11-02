@@ -1,7 +1,11 @@
 {
   "name": "time-logger-api",
   "version": "0.0.1",
-  "description": "",
+  "description": "todo api app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UchihaVeha/todo-api-app.git"
+  },
   "engines": {
     "node": "8.9.0",
     "npm": "5.5.1"
