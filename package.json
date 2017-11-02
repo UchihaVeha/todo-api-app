@@ -12,15 +12,17 @@
   },
   "main": "index.js",
   "scripts": {
+    "heroku-prebuild": "npm install --only=dev",
+    "postinstall": "npm run build && npm run migrate",
+    "build": "npx babel src --out-dir build",
     "start": "node ./node_modules/.bin/pm2 start build/index.js -i max --attach",
     "start:dev": "npx nodemon index-dev.js",
-    "build": "./node_modules/.bin/babel src --out-dir build",
     "lint": "npx eslint -c .eslintrc src",
     "test": "npm run lint && npx jest",
     "migrate": "npx knex migrate:latest",
     "migrate-down": "npx knex migrate:rollback",
     "prettify": "npx prettier --single-quote --trailing-comma none --write \"src/**/*.js\"",
-    "postinstall": "npm run build && npm run migrate"
+
   },
   "author": "Vitaliy Kolodeev",
   "license": "ISC",
