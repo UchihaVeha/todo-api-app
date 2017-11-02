@@ -1,0 +1,7 @@
+sudo: false
+language: node_js
+node_js: 7
+services:
+  - postgresql
+addons:
+  postgresql: "9.6"

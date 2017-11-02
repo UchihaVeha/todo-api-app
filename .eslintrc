@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
+  "plugins": [
+    "import",
+    "prettier"
+  ],
+  "env": {
+    "browser": false,
+    "node": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "none",
+      "bracketSpacing": true,
+      "jsxBracketSameLine": false
+    }],
+    "no-param-reassign": [2, {"props": false}],
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "comma-dangle": 0
+  },
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src"]
+    }
+  },
+  "globals": {
+    "jasmine": true
+  }
+}

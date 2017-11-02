@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todos middleware Create Todo: POST /todos should: tags be unique 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "dupePos": 0,
+      "dupeValue": "unique",
+      "key": 1,
+      "label": "tags",
+      "pos": 1,
+      "value": "unique",
+    },
+    "message": "\\"tags\\" position 1 contains a duplicate value",
+    "path": Array [
+      "tags",
+      1,
+    ],
+    "type": "array.unique",
+  },
+]
+`;
+
+exports[`Todos middleware Create Todo: POST /todos should: todo.onDate is required 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "onDate",
+      "label": "onDate",
+    },
+    "message": "\\"onDate\\" is required",
+    "path": Array [
+      "onDate",
+    ],
+    "type": "any.required",
+  },
+]
+`;
+
+exports[`Todos middleware Create Todo: POST /todos should: todo.tags can be - min 2, max 50,  alphanumeric or _ or -  1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": 0,
+      "label": 0,
+      "limit": 2,
+      "value": "1",
+    },
+    "message": "\\"0\\" length must be at least 2 characters long",
+    "path": Array [
+      "tags",
+      0,
+    ],
+    "type": "string.min",
+  },
+  Object {
+    "context": Object {
+      "key": 1,
+      "label": 1,
+      "limit": 50,
+      "value": "ttttttttttttttttttttttttttttttttttttttttttttttttttt",
+    },
+    "message": "\\"1\\" length must be less than or equal to 50 characters long",
+    "path": Array [
+      "tags",
+      1,
+    ],
+    "type": "string.max",
+  },
+  Object {
+    "context": Object {
+      "key": 2,
+      "label": 2,
+      "name": "alphanumeric or _ or -",
+      "pattern": Object {},
+      "value": "not valid",
+    },
+    "message": "\\"2\\" with value \\"not valid\\" fails to match the alphanumeric or _ or - pattern",
+    "path": Array [
+      "tags",
+      2,
+    ],
+    "type": "string.regex.name",
+  },
+  Object {
+    "context": Object {
+      "key": 3,
+      "label": 3,
+      "name": "alphanumeric or _ or -",
+      "pattern": Object {},
+      "value": "!@#$%&*",
+    },
+    "message": "\\"3\\" with value \\"!@#$%&*\\" fails to match the alphanumeric or _ or - pattern",
+    "path": Array [
+      "tags",
+      3,
+    ],
+    "type": "string.regex.name",
+  },
+]
+`;
+
+exports[`Todos middleware Create Todo: POST /todos should: todo.tags max length 20 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "tags",
+      "label": "tags",
+      "limit": 20,
+      "value": Array [
+        "test0",
+        "test1",
+        "test2",
+        "test3",
+        "test4",
+        "test5",
+        "test6",
+        "test7",
+        "test8",
+        "test9",
+        "test10",
+        "test11",
+        "test12",
+        "test13",
+        "test14",
+        "test15",
+        "test16",
+        "test17",
+        "test18",
+        "test19",
+        "test20",
+      ],
+    },
+    "message": "\\"tags\\" must contain less than or equal to 20 items",
+    "path": Array [
+      "tags",
+    ],
+    "type": "array.max",
+  },
+]
+`;
+
+exports[`Todos middleware Create Todo: POST /todos should: todo.title is required 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "title",
+      "label": "title",
+    },
+    "message": "\\"title\\" is required",
+    "path": Array [
+      "title",
+    ],
+    "type": "any.required",
+  },
+]
+`;
+
+exports[`Todos middleware Fetch Todos: get /todos should: onDate param is required 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "onDate",
+      "label": "onDate",
+    },
+    "message": "\\"onDate\\" is required",
+    "path": Array [
+      "onDate",
+    ],
+    "type": "any.required",
+  },
+]
+`;

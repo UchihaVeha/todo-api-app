@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Authorize middleware Route: /sign-in  should not be invalid - email 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "email",
+      "label": "email",
+      "value": "invalidEmail",
+    },
+    "message": "\\"email\\" must be a valid email",
+    "path": Array [
+      "email",
+    ],
+    "type": "string.email",
+  },
+]
+`;
+
+exports[`Authorize middleware Route: /sign-up should allow only alpha-numeric characters - password  1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "password",
+      "label": "password",
+      "value": "!@#$%^&*()",
+    },
+    "message": "\\"password\\" must only contain alpha-numeric characters",
+    "path": Array [
+      "password",
+    ],
+    "type": "string.alphanum",
+  },
+]
+`;
+
+exports[`Authorize middleware Route: /sign-up should be mandatory - email 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "email",
+      "label": "email",
+    },
+    "message": "\\"email\\" is required",
+    "path": Array [
+      "email",
+    ],
+    "type": "any.required",
+  },
+]
+`;
+
+exports[`Authorize middleware Route: /sign-up should not be empty - email 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "email",
+      "label": "email",
+    },
+    "message": "\\"email\\" is not allowed to be empty",
+    "path": Array [
+      "email",
+    ],
+    "type": "any.empty",
+  },
+  Object {
+    "context": Object {
+      "key": "email",
+      "label": "email",
+      "value": "",
+    },
+    "message": "\\"email\\" must be a valid email",
+    "path": Array [
+      "email",
+    ],
+    "type": "string.email",
+  },
+]
+`;
+
+exports[`Authorize middleware Route: /sign-up should not be empty - password 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "password",
+      "label": "password",
+    },
+    "message": "\\"password\\" is not allowed to be empty",
+    "path": Array [
+      "password",
+    ],
+    "type": "any.empty",
+  },
+  Object {
+    "context": Object {
+      "key": "password",
+      "label": "password",
+      "value": "",
+    },
+    "message": "\\"password\\" must only contain alpha-numeric characters",
+    "path": Array [
+      "password",
+    ],
+    "type": "string.alphanum",
+  },
+  Object {
+    "context": Object {
+      "key": "password",
+      "label": "password",
+      "limit": 6,
+      "value": "",
+    },
+    "message": "\\"password\\" length must be at least 6 characters long",
+    "path": Array [
+      "password",
+    ],
+    "type": "string.min",
+  },
+]
+`;
+
+exports[`Authorize middleware Route: /sign-up should not be invalid - email 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "email",
+      "label": "email",
+      "value": "invalidEmail",
+    },
+    "message": "\\"email\\" must be a valid email",
+    "path": Array [
+      "email",
+    ],
+    "type": "string.email",
+  },
+]
+`;
+
+exports[`Authorize middleware Route: /sign-up should not be too long - password 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "password",
+      "label": "password",
+      "limit": 60,
+      "value": "ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp",
+    },
+    "message": "\\"password\\" length must be less than or equal to 60 characters long",
+    "path": Array [
+      "password",
+    ],
+    "type": "string.max",
+  },
+]
+`;
+
+exports[`Authorize middleware Route: /sign-up should not be too short - password 1`] = `
+Array [
+  Object {
+    "context": Object {
+      "key": "password",
+      "label": "password",
+      "limit": 6,
+      "value": "pass",
+    },
+    "message": "\\"password\\" length must be at least 6 characters long",
+    "path": Array [
+      "password",
+    ],
+    "type": "string.min",
+  },
+]
+`;
