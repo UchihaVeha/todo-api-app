@@ -51,12 +51,10 @@ const config = {
         user: 'time-logger',
         password: 'timelogger'
       },
-      /*
       pool: {
         min: 2,
         max: 10
       },
-      */
       migrations: {
         directory: path.resolve(dbPath, 'migrations')
       },
